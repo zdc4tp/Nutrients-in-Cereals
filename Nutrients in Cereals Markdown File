@@ -1,0 +1,57 @@
+---
+title: "DS 2003 Midterm Project - Cereals"
+date: "2024-02-21"
+output: html_document
+---
+
+### Group 12
+#### Members:
+
+Sarah Schubel, Bryan Tang, Isabella Wright, Chai Zhang
+
+### Topic: Nutrients in Cereal
+
+#### Dateset: "80 Cereals"
+Found on Kaggle (made by Chris Crawford): https://www.kaggle.com/datasets/crawford/80-cereals
+
+The "80 Cereals" dataset contains dietary characteristic information on about 80 cereal products.
+
+Columns:
+
+* name (cereal name)
+  + mfr (manufacturer)
+  + A = American Home Food
+  + G = General Mills
+  + K = Kelloggs
+  + N = Nabisco
+  + P = Post
+  + Q = Quaker Oats
+  + R = Ralston Purina
+* type
+  + Cold
+  + Hot
+* calories (per serving)
+* protein (grams of protein)
+* fat (grams of fat)
+* sodium (milligrams of sodium)
+* fiber (grams of dietary fiber)
+* carbo (grams of complex carbohydrates)
+* sugars (grams of sugars)
+* potass (milligrams of potassium)
+* vitamins (vitamins and minerals; 0, 25, or 100, indicating the typical percentage of FDA recommended)
+* shelf (display shelf; 1, 2, or 3, counting from the floor)
+* weight (weight in ounces of one serving)
+* cups (number of cups in one serving)
+* rating (a rating of the cereals)
+
+### Propsed questions:
+1. Which cereals in the dataset meet the FDA criteria for a healthy stamp based on saturated fat, sodium, and added sugars?
+2. Are there any correlations between the shelf placement of cereals and their nutritional content?
+3. Which manufacturers produce cereals with the highest average amount of fiber and potassium (FDA recommended nutrients to get more of) per serving?
+4. Are there any trends or patterns in the nutritional content of cereals across different manufacturers?
+
+### Loading in the "80 Cereals" dataset
+```{r, warning=FALSE}
+library(tidyverse)
+cereals <- read_csv("cereal.csv")
+```
